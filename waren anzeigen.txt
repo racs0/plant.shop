@@ -1,0 +1,96 @@
+UserStories: Waren Anzeigen.
+
+Waren Anzeigen:
+
+Spezifikation:
+Die App soll in einem Grid alle Produkte nach ID geordnet mit Bildern und Preis anzeigen.
+Die Produkte sollen von einem Server und intern von einer Datenbank abgefragt werden
+Falls ein Produkt dazu oder weg kommt, soll die View aktualisiert werden.
+Es sollen am Anfang nicht alle Daten abgefragt werden, um ein schnelleres starten der App zu ermöglichen
+Das Laden der Daten soll in einem Backgroundthread geschehen, um ein Laggen der App zu vermeiden
+Name: max 20 Zeichen
+Bild: 265*265 pixel
+Maximaler Preis: 2^31 €
+
+
+Layout:
+
+
+Priorität:
+must have
+
+Nicht-Funktionale-Anforderungen:
+Die App muss flüssig funktuinieren
+Startzeit unter 2 Sekunden
+Die Verbindung zum Server muss Verschlüsselt sein
+
+Definition-of-Done:
+
+
+
+Tasks:
+UI implementieren - Yim
+Datenbank einrichten und Schnittstelle implementieren - Mistlberger
+Verschlüsselung (CryptoService) implementieren - Mazanek
+Verbindungsaufbau von App einrichten - Gugel
+Verbindungsaufbau auf dem Server einrichten - Pointer
+App Logic implementieren (UserRequestHandler) - Mazanek
+Server Logic implementieren (ClientRequestHandler) - Pointner
+
+
+UI implementieren:
+<UI Entwurf realisieren> 
+Soll Anzahl der maximal anzeigbaren Waren zurückgeben können
+Soll Frei Skalierbar sein
+Scrollmöglichkeit soll unterstützt werden
+4-5
+
+
+Verschlüsselung implementieren:
+Eine Klasse, welche Verschlüsselung und Entschlüsselung unterstützen soll.
+Über das Public Private Key Verfahren soll ein gemeinsamer Schlüssel ausgemacht werden, worüber, dann die restlichen Daten verschlüsselt werden
+3-4 std
+
+Datenbank einrichten und Schnittstelle implementieren:
+Auf dem Server soll eine Datenbank eingerichtet werden, welche alle Waren speichert
+Dazu soll noch eine Schnittstelle (Repository) implementiert werden, welche folgende Aktionen unterstützt:
+Alle Waren von {ID} bis {ID} abfragen
+Nächste Ware abfragen
+2-3 std
+
+Verbindungsaufbau von App einrichten:
+Baut eine TCP Verbindung zu einem Vorgegebenen Server auf (mit DNS-Name, Port 8477), dazu kommt noch eine Identifikation,
+und der Key wird ausgemacht (CryptoService)
+Falls dabei ein Fehler auftritt soll eine Exception geworfen werden
+Folgende Aktionen werden unterstützt:
+Mit Server verbinden
+Verbindung trennen 
+Daten asynchron schicken
+Daten asynchron empfangen (Callback-Prinzip)
+4-5
+
+Verbindungsaufbau auf dem Server einrichten:
+Wartet auf Verbindungen (Port 8477) in einem eigenen Thread
+Wenn eine Verbindung eingeht, soll ein neuer Thread gestartet werden, welche sich um die Verbindung kümmert
+Hierfür soll zuerste eine Verschlüsselung ausgemacht werden (CryptoService)
+Danach sollen eingehende Daten an den ClientRequestHandler weitergegeben werden
+Folgende Aktionen werden unterstützt:
+Auf Verbindung warten
+Bei einer bestehenden Verbindung:
+Daten senden
+Daten empfangen
+Verbindung trennen Anfragen bearbeiten
+3-4
+
+App Logic implementieren:
+Der eigentliche Programmablauf der App soll hier geschehen,
+dient Primär nur als Koordinator von UI und Connector,
+Die Logic soll am Anfang eine Verbindung aufbauen, dann die ersten X Datensätze von der Verbindung abfragen (Bildschrirmgröße ausschlaggebend)
+Wenn die UI Rückmeldung über ein Scrollen gibt, sollen weitere Datensätze abgefragt werden
+Wenn die App geschlossen wird, soll die Verbindung getrennt werden
+3-4
+
+Server Logic implemenieren:
+Dient als Koordinator zwischen Database und Connector,
+Interpretiert die Anfragen, welche durch den Connector eingehen und sendet nach Kommunikation mit der Datenbank die angefragten Daten
+1-2

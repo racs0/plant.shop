@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0120afd6-0259-4610-9a9d-7bc3681d1e1c" name="OOA" linkedPackageId="af8797b9-171a-4ec1-ac64-fe62437b27fa" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7d710463-9f8a-41e1-8d6d-fb9252d072de" name="App">
+        <elementDefinition Id="da86d6b5-85ad-4fad-a5a7-8e7cd539e264" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="a268f8d0-6de5-46a5-904f-a5aedf9f1ef9" name="UI" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6fd4d3c3-f041-4e99-89d9-e0e92bc182f6" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="96f576f3-b6ba-4df8-a065-a08f97c49541" name="UserRequestHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="dbafa90a-7ceb-4af2-86ba-b0aa75df8016" />
+              <targetEnds>
+                <association Id="001e2d3c-97a0-4c87-aee7-be0953ea1866" isDerived="false" sourceEndRoleName="UserRequestHandler" targetEndRoleName="UI" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a268f8d0-6de5-46a5-904f-a5aedf9f1ef9" LastKnownName="UI" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="09e69150-116c-4dba-b21e-b28d9f9015ac" name="UserRequestHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7c6cd4e8-f95e-4894-ba2c-b23058c4c0d1" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7ab0d538-48b2-49c0-b86e-20ffb51e3fc4" name="UI" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="e0a1b54e-4034-4a3d-9019-ca01088ed1d0" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="50dc8530-637f-464c-857f-7ef217172e79" />
+                </association>
+                <association Id="9581ff0c-42ff-4db4-aa46-f2599cd91f84" isDerived="false" sourceEndRoleName="UserRequestHandler" targetEndRoleName="ServerConnectionHandler" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="04fcae2f-acb0-4902-bf7d-b56e5ee75df4" LastKnownName="ServerConnectionHandler" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e8207f78-d2c8-4811-8100-0f991993cc05" name="UserRequestHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="05c3bd35-32fa-44ed-8c85-2ea2e40720ca" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5b2ee22c-47ba-40d9-9375-e446b99ff277" name="ServerConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="303c75f6-3ff2-4cc8-a4a2-93afb76e679f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="7c93b021-161b-4685-8830-572c78d1e98e" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="04fcae2f-acb0-4902-bf7d-b56e5ee75df4" name="ServerConnectionHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="9d84d0ab-73cb-40c2-ac3f-48ebc08fd118" />
+              <targetEnds>
+                <association Id="2c86803b-ffaa-4682-bf7a-63ae7d42d4ac" isDerived="false" sourceEndRoleName="ServerConnectionHandler" targetEndRoleName="ClientConnectionHandler" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="368a7a39-064f-41dc-815b-8cc237f34494" LastKnownName="IncommingConnectionHandler" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4e929500-208c-42bd-8b87-df01c009e409" name="ServerConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="4cfb4ea0-bbff-42f8-be3d-6d703c976c6c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="46552a1d-5085-4908-a47d-1e058fd70572" name="ClientConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="9eac7a6a-6f37-4733-a652-9627cf25888b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9b32a414-6511-4331-b655-ce64d56cf117" />
+                </association>
+                <association Id="1877fd31-5c8e-4524-a416-d75b21eb9534" isDerived="false" sourceEndRoleName="ServerConnectionHandler" targetEndRoleName="CryptoService" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="d8f74659-d115-4395-ba4c-1348e2bb1f17" LastKnownName="CryptoService" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1678e2e3-51fa-465a-af08-d34c70166291" name="ServerConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="69138dd3-99d6-424d-9ec5-adedd9918285" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6af53509-2186-408f-aed4-f2f41d463c5c" name="CryptoService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="46462e0f-e9f2-4552-9d3d-e657caf82e46" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a3f8c217-8d57-4cdc-9376-6bd18db2eb22" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="20e675f7-faa9-4615-b814-dd684036b1fb" name="Server">
+        <elementDefinition Id="9a307905-db12-47a7-b905-89ab94b7187f" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="baaaacf0-cdb2-476e-a063-29ef654161af" name="DatabaseClient" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b87c87ad-2172-49d0-adbd-f68472f1c1a8" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="bf432e97-67c3-44b9-8f42-d84e4aca5068" name="ClientRequestHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e9875309-700e-4aca-854f-28a5689c19b8" />
+              <targetEnds>
+                <association Id="5c90829d-8573-44fa-a8ba-223b6977e5e4" isDerived="false" sourceEndRoleName="RequestHandler" targetEndRoleName="Repository" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="25d44edb-2c8d-41c4-8551-21f56c14b4c8" LastKnownName="Repository" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b3b0a28c-3a1c-4adb-865f-4295a13804f6" name="RequestHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="62bc1a9b-9a33-4f9a-b078-04a5ec001613" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9c7f9744-c4aa-4874-aeac-15a848c66192" name="Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="a4c28a2c-27ed-413e-9bff-bae2a4aa1102" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="580917cf-8b9c-43a9-a907-4b3f99601f62" />
+                </association>
+                <association Id="0d20363f-01e8-451a-a5b8-d4145dfc72ca" isDerived="false" sourceEndRoleName="RequestHandler" targetEndRoleName="ConnectionHandler" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="368a7a39-064f-41dc-815b-8cc237f34494" LastKnownName="IncommingConnectionHandler" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7e50e1f6-221b-4865-a356-ef4c6c662103" name="RequestHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="40fe81df-9ad7-43af-9dc7-bff64b584c51" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="49389915-52aa-4ad0-bf40-5e92f49e1bae" name="ConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="b4ccbf8d-c012-4d57-ad08-afa063c71e29" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a41a5102-6da8-4d95-afe2-de8c92fe6306" />
+                </association>
+                <association Id="a80b80cf-9541-49b8-856b-0950fa640843" isDerived="false" sourceEndRoleName="ClientRequestHandler" targetEndRoleName="ClientConnection" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="cea98c6b-c538-4970-bd88-b860fd153c4b" LastKnownName="ClientConnection" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2bed45d3-8a2f-4ce2-ae40-2743ebe369af" name="ClientRequestHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="238f9bbb-abed-4a58-90b2-c73a3edd3962" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ec0877e7-030a-4a3d-b61d-84c00d515e14" name="ClientConnection" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="e5049303-d353-4bcd-a28e-a32e207e5e8f" name="Lower" value="0">
+                            <elementDefinition Id="8d34e166-f45b-480c-92d6-5aec573c4fe3" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="8db7a15d-526e-440e-9d19-edfd347389c7" name="Upper" value="*">
+                            <elementDefinition Id="9f36c78b-4c9f-4a4b-852f-3459d2725804" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="2a826ca3-55ae-451f-b747-c11ece6a4132" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="e0a6cb65-aefc-478e-a836-0a58c2fc8fff" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="25d44edb-2c8d-41c4-8551-21f56c14b4c8" name="Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b85e783d-4e31-47ef-bf4f-90698e5210b9" />
+              <targetEnds>
+                <association Id="0e699294-da58-4f46-b1f3-dc213185dda8" isDerived="false" sourceEndRoleName="Repository" targetEndRoleName="DatabaseClient" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="baaaacf0-cdb2-476e-a063-29ef654161af" LastKnownName="DatabaseClient" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bcd6f1d4-20fd-40f0-b58a-69a22114637c" name="Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="0ba86a20-4fa1-4f07-af28-0648790c3256" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6ec81f9c-25df-4cef-bc30-b553ec9b800c" name="DatabaseClient" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="f7477008-883b-4f5a-8671-e988915838a7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="d415a879-0d47-463a-9405-1c60a784e097" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="368a7a39-064f-41dc-815b-8cc237f34494" name="IncommingConnectionHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="952f31ce-76c7-442f-957d-978b4cc98c92" />
+              <targetEnds>
+                <association Id="50f2d518-a1fb-432a-be1c-4d6d4a42fe9e" isDerived="false" sourceEndRoleName="ClientConnectionHandler" targetEndRoleName="CryptoService" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="d8f74659-d115-4395-ba4c-1348e2bb1f17" LastKnownName="CryptoService" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="34c6c4a0-71e1-49d3-9903-d0aadd306082" name="ClientConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="94a99926-0173-44e8-9df6-f339206bee96" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="650e7426-44a6-42eb-9681-5fd8d92597af" name="CryptoService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="2b90225f-c9d0-40e9-bbc6-32ec81b29da1" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="8a5fcb2a-3650-44d1-ba81-01ff6c610537" />
+                </association>
+                <association Id="601f81e3-55ff-47a1-9d41-3011c6eb2950" isDerived="false" sourceEndRoleName="IncommingConnectionHandler" targetEndRoleName="ClientConnection" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="cea98c6b-c538-4970-bd88-b860fd153c4b" LastKnownName="ClientConnection" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b2d30a16-7d07-4fa4-b8b5-80284a3e5ad5" name="IncommingConnectionHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="6bdfb8c8-558d-4b42-a5c3-34d84195ea9d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c8f7d110-cc47-4e8f-87d5-203893c19b7b" name="ClientConnection" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d4bb2f9f-378a-4287-b882-207711036bde" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a2929807-b774-440e-a6f7-f722132a0401" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="cea98c6b-c538-4970-bd88-b860fd153c4b" name="ClientConnection" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0f8634f1-42ba-4b75-9ffc-bcecf362db98" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8f74659-d115-4395-ba4c-1348e2bb1f17" name="CryptoService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a2165b04-4f28-46a5-92c6-e3ee8e6b4a94" />
+        <ownedOperationsInternal>
+          <operation Id="8e7b7231-fc61-4198-bc57-8d3479f1bce6" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="354ab6c0-1c81-4b17-ab6f-290208a0265a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe2ee941-4f58-4290-87ae-4abebf36518d" name="String" direction="In" isUnique="false">
+                  <elementDefinition Id="aa1e739f-19e7-4a8d-abac-045a7727db73" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8524221a-2784-47b7-8c28-8c9eaa38013b" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d85075e-4829-4111-9e10-073d7463e07a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a7e05c3f-9e3d-4760-9427-16b2cbdcc71e" name="String" direction="In" isUnique="false">
+                  <elementDefinition Id="f32e43d5-53c4-4358-8b53-6cb87f689440" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b2ffb42-5c5b-4e30-a902-990cff9bfcbd" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d897037-c2ca-45e0-928b-792ca4955b70" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="af8797b9-171a-4ec1-ac64-fe62437b27fa" name="Diagrams">
+    <elementDefinition Id="0b3281a2-b2c9-4d69-ab66-788ad1924a0f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="33aa897b-d1f2-4265-8eea-89712b0b387b">
+        <profileInstance Id="d132bd2f-78a4-45d4-9c75-142a93878196" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f08d25c9-a1f6-4073-acda-2cf353776935">
+        <profileInstance Id="65b73f98-01ae-4f9d-b09f-24572f738699" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

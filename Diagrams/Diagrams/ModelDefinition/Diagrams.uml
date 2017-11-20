@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0b3281a2-b2c9-4d69-ab66-788ad1924a0f"
+  name="Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="82145ef8-aec5-4516-9afc-f68d6a182450"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="40a9cf4b-5392-4301-aaad-b7263e22fe8c"
+        LastKnownName="App"
+        LastKnownLocation="Package_0929.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="da86d6b5-85ad-4fad-a5a7-8e7cd539e264"
+        LastKnownName="App"
+        LastKnownLocation="Package_0932.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9a307905-db12-47a7-b905-89ab94b7187f"
+        LastKnownName="Server"
+        LastKnownLocation="Package1_0932.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a2165b04-4f28-46a5-92c6-e3ee8e6b4a94"
+        name="CryptoService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="354ab6c0-1c81-4b17-ab6f-290208a0265a"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa1e739f-19e7-4a8d-abac-045a7727db73"
+                  name="String"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2d85075e-4829-4111-9e10-073d7463e07a"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f32e43d5-53c4-4358-8b53-6cb87f689440"
+                  name="String"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4eeace0e-d743-440c-b7c4-4b44a46bb0a1"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="18bde633-1473-4929-abfe-f6fbe16ade49"
+            name="Price"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="883d2034-174f-48f4-a387-ccb7e9197334"
+                LastKnownName="Int"
+                LastKnownLocation="Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="18ba24ac-1dd2-4ed0-b77e-e33eb29bf7c2"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="432f0568-c47d-451d-b137-4f2b9d1a7de7"
+                LastKnownName="Varchar2(20)"
+                LastKnownLocation="Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e92ce7bb-7e48-4ab6-9fd6-75bd7cc0d860"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f8225740-7a15-4c64-9d0e-5ffcd532ba31"
+                LastKnownName="Int as Primary Key"
+                LastKnownLocation="Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="932e96f7-7d02-43e0-9a76-9137ab3db6d7"
+            name="Picture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a5124fef-0420-44d6-b829-e6f60f4ed78a"
+                LastKnownName="Picture(256x256)"
+                LastKnownLocation="Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="883d2034-174f-48f4-a387-ccb7e9197334"
+        name="Int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="432f0568-c47d-451d-b137-4f2b9d1a7de7"
+        name="Varchar2(20)" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f8225740-7a15-4c64-9d0e-5ffcd532ba31"
+        name="Int as Primary Key" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a5124fef-0420-44d6-b829-e6f60f4ed78a"
+        name="Picture(256x256)" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0d897037-c2ca-45e0-928b-792ca4955b70"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

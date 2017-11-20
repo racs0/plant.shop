@@ -1,0 +1,20 @@
+1 - Waren anzeigen
+Ich als Interessent möchte alle Waren übersichtlich mit dem Preis sehen
+
+2 - Warendetails anzeigen
+Ich als Interessent möchte bei Auswahl der Ware die Warendetails (Bild, Beschreibung, Tags, Preis, Kategorie)
+
+3 - Ware vermerken
+Ich als Käufer möchte eine Ware in meinem Warenkorb vermerken
+
+4 - Ware suchen
+Ich als Interessent möchte in einer Suchleiste nach Waren suchen
+
+5 - Ware zum Verkauf anbieten
+Ich als Verkäufer möchte meine Ware im Shop anbieten
+
+6 - Ware kaufen
+Ich als Käufer möchte Ware kaufen
+
+7 - Account erstellen und verwalten
+Ich als Benutzer der App möchte einen Account erstellen und verwalten

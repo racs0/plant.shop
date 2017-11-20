@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="080b2391-d6bc-4bc9-81a8-73c6f72482f5" name="Database" linkedPackageId="2762d969-7724-4140-bd79-5cdd08d34644" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="08891652-8f86-4a12-a84e-bea3039d8145">
+      <profileInstance Id="fcbd55d1-ac65-4200-a9e8-f45224937ac5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9cacbed0-6e56-44b0-b8c5-e24c2901e200">
+      <profileInstance Id="fcfc1780-98cf-429b-b0ba-0b82acef7b88" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="26405d8c-6243-4640-8333-cf992e8c6aba" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4eeace0e-d743-440c-b7c4-4b44a46bb0a1" />
+        <ownedAttributesInternal>
+          <property Id="1cde9243-64d0-4d8e-bee1-dc82124dd453" name="Price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18bde633-1473-4929-abfe-f6fbe16ade49" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f57140e8-dba4-4806-b892-e11e78cbc155" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="22eac862-07dd-4948-bc09-229e682902a0" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18ba24ac-1dd2-4ed0-b77e-e33eb29bf7c2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6ad48af1-0d1d-4e99-a907-121668565010" LastKnownName="Varchar2(20)" />
+            </type_NamedElement>
+          </property>
+          <property Id="5377ddcb-809b-478d-9652-6aadd302363c" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e92ce7bb-7e48-4ab6-9fd6-75bd7cc0d860" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cace6e2a-5673-4bb5-86c7-c6037f5c69a6" LastKnownName="Int as Primary Key" />
+            </type_NamedElement>
+          </property>
+          <property Id="9f8405dc-f424-4567-8989-e3d10ff8b970" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="932e96f7-7d02-43e0-9a76-9137ab3db6d7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="50c181e3-32b3-4999-bcec-34842a087247" LastKnownName="Picture(256x256)" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f57140e8-dba4-4806-b892-e11e78cbc155" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
+        <elementDefinition Id="883d2034-174f-48f4-a387-ccb7e9197334" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6ad48af1-0d1d-4e99-a907-121668565010" name="Varchar2(20)" isAbstract="false" isLeaf="false" cachedFullName="Varchar2(20)">
+        <elementDefinition Id="432f0568-c47d-451d-b137-4f2b9d1a7de7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cace6e2a-5673-4bb5-86c7-c6037f5c69a6" name="Int as Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Int as Primary Key">
+        <elementDefinition Id="f8225740-7a15-4c64-9d0e-5ffcd532ba31" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="50c181e3-32b3-4999-bcec-34842a087247" name="Picture(256x256)" isAbstract="false" isLeaf="false" cachedFullName="Picture(256x256)">
+        <elementDefinition Id="a5124fef-0420-44d6-b829-e6f60f4ed78a" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="2762d969-7724-4140-bd79-5cdd08d34644" name="Diagrams">
+    <elementDefinition Id="0b3281a2-b2c9-4d69-ab66-788ad1924a0f" />
+  </package>
+</logicalClassDesignerModel>

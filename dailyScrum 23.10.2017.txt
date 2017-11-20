@@ -1,0 +1,7 @@
+UI implementieren - Yim -> in Arbeit
+Datenbank einrichten und Schnittstelle implementieren - Mistlberger -> in Arbeit
+Verschlüsselung (CryptoService) implementieren -> offen
+Verbindungsaufbau von App einrichten - Mazanek -> offen
+Verbindungsaufbau auf dem Server einrichten - Pointner -> in Arbeit
+App Logic implementieren (UserRequestHandler) - Mazanek -> in Arbeit
+Server Logic implementieren (ClientRequestHandler) - Gugel-> in Arbeit
